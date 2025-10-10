@@ -52,13 +52,14 @@ function Navbar() {
                             <div><h3>Products</h3></div>
                             <div><h3>About Us</h3></div>
                             <div><h3>Contact Us</h3></div>
-                            <div className='relative group  '>
-                                <h3>Pages</h3>
-                                <div className='absolute w-[200px] left-0 top-full  bg-white text-black p-4 hidden
-                                 group-hover:block shadow-lg'>
-                                    <div>Action</div>
-                                    <div>Another Action</div>
-                                    <div>Something Else</div>
+                            <div className='relative group'>
+                                <div>
+                                    <h3>Pages</h3>
+                                    <div className='absolute w-[200px] left-0 top-full bg-white text-black p-4 hidden group-hover:flex flex-col gap-2 shadow-lg'>
+                                        <div className='py-1'>Action</div>
+                                        <div className='py-1'>Another Action</div>
+                                        <div className='py-1'>Something Else</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
