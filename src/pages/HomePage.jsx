@@ -8,6 +8,7 @@ import TopCategory from '../component/TopCategory'
 import LaptopComputer from '../component/LaptopComputer'
 import Blog from '../component/Blog'
 import Footer from '../component/Footer'
+import ProductDetails from './ProductDetails'
 
 function HomePage() {
     return (
@@ -24,6 +25,8 @@ function HomePage() {
 
             <Blog />
             <Footer />
+
+            <ProductDetails />
 
 
         </div>

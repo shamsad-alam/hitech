@@ -14,11 +14,11 @@ function Footer() {
 
                             {/* Card accepted icons */}
                             <div className='flex gap-3 mt-5'>
-                                <img className='w-10' src="" alt="" />
-                                <img className='w-10' src="https://dostguru.com/HTML/hitech/assets/img/payment/payment_2.png" alt="" />
-                                <img className='w-10' src="https://dostguru.com/HTML/hitech/assets/img/payment/payment_3.png" alt="" />
-                                <img className='w-10' src="https://dostguru.com/HTML/hitech/assets/img/payment/payment_4.png" alt="" />
-                                <img className='w-10' src="https://dostguru.com/HTML/hitech/assets/img/payment/payment_5.png" alt="" />
+                                <img className='w-10' src="https://www.svgrepo.com/show/328144/visa.svg" alt="" />
+                                <img className='w-10' src="https://www.svgrepo.com/show/328144/visa.svg" alt="" />
+                                <img className='w-10' src="https://www.svgrepo.com/show/328144/visa.svg" alt="" />
+                                <img className='w-10' src="https://www.svgrepo.com/show/328144/visa.svg" alt="" />
+
                             </div>
                         </div>
                         <div>
