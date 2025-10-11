@@ -6,6 +6,8 @@ import SpecialProduct from '../component/SpecialProduct'
 import TopProduct from '../component/TopProduct'
 import TopCategory from '../component/TopCategory'
 import LaptopComputer from '../component/LaptopComputer'
+import Blog from '../component/Blog'
+import Footer from '../component/Footer'
 
 function HomePage() {
     return (
@@ -18,6 +20,12 @@ function HomePage() {
             <TopProduct />
             <TopCategory />
             <LaptopComputer />
+            {/* Copy LaptopComputer component and Add more Section  */}
+
+            <Blog />
+            <Footer />
+
+
         </div>
     )
 }

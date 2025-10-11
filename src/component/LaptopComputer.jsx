@@ -9,7 +9,7 @@ function LaptopComputer() {
                         <h2 className='text-2xl font-semibold' ><span className='text-[#ff3333]'>Laptop</span> & Computer</h2>
                         <div className='col-span-4 border-b-1 border-zinc-400'></div>
                     </div>
-                    <div className='flex gap-6'>
+                    <div className='flex flex-col lg:flex-row gap-6'>
                         <img src="https://dostguru.com/HTML/hitech/assets/img/c&l.jpg" alt="" />
 
                         <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3  gap-6'>
