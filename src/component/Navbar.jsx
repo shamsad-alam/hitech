@@ -3,10 +3,10 @@ import React from 'react'
 function Navbar() {
     return (
         <>
-            <div className='w-full'>
+            <div className='w-full bg-white shadow-md sticky top-0 z-50'>
                 {/* ==================== Top Navbar ================= */}
                 <div className='bg-gray-800 text-white p-2 '>
-                    <div className='hidden md:flex max-w-[90%] mx-auto justify-between items-center'>
+                    <div className='hidden md:flex max-w-[90%] flex-wrap mx-auto justify-between items-center'>
                         <h3>Get 30% Off On Selected Items</h3>
                         <div className='flex gap-6'>
                             <div><h3>My Account</h3></div> |
