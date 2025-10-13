@@ -1,13 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+
 // import OfferTimer from './OfferTimmer'
 
+const cardData = [
+    { id: 1, image: 'https://dostguru.com/HTML/hitech/assets/img/product/deal_1.jpg', star: 'star Here', title: 'Smart Watch Black', mainPrice: '$30.00', subPrice: '$40.00' },
+    { id: 2, image: 'https://dostguru.com/HTML/hitech/assets/img/product/deal_1.jpg', star: 'star Here', title: 'Smart Watch Black', mainPrice: '$30.00', subPrice: '$40.00' },
+    { id: 3, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_6.jpg', star: 'star Here', title: 'Smart Watch Black', mainPrice: '$30.00', subPrice: '$40.00' },
+    { id: 4, image: 'https://dostguru.com/HTML/hitech/assets/img/product/deal_1.jpg', star: 'star Here', title: 'Smart Watch Black', mainPrice: '$30.00', subPrice: '$40.00' },
+    { id: 4, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_8.jpg', star: 'star Here', title: 'Smart Watch Black', mainPrice: '$30.00', subPrice: '$40.00' },
+
+]
+
 function SpecialProduct() {
+    const [next, setnext] = useState(0)
+
+    const handleRight = () => {
+        if (next + 3 < cardData.length) {
+            setnext(next + 1)
+        }
+    }
+    const handleleft = () => {
+        if (next > 0) {
+            setnext(next - 1)
+        }
+    }
     return (
         <>
             <div className='w-[90%] mx-auto py-10'>
                 <div className='grid lg:grid-cols-2 gap-10'>
                     <div>
-                        <div className='grid lg:grid-cols-3 items-center gap-4 mb-5'>
+                        <div className='grid  lg:grid-cols-3 items-center gap-4 mb-5'>
                             <h2 className='text-2xl font-semibold' ><span className='text-[#ff3333]'>Deal</span> Of The Day</h2>
                             <div className='col-span-2 border-b-1 border-zinc-400'></div>
                         </div>
@@ -45,12 +69,27 @@ function SpecialProduct() {
                     </div>
 
                     <div>
-                        <div className='grid  lg:grid-cols-3 items-center gap-4 mb-5'>
-                            <h2 className='text-2xl font-semibold' ><span className='text-[#ff3333]'>Special</span> Product</h2>
-                            <div className='col-span-2 border-b-1 border-zinc-400'></div>
+                        <div className='grid grid-cols-3 md:grid-cols-9 items-center justify-between gap-4 mb-5'>
+                            <h2 className='text-2xl col-span-3 -order-2 font-semibold' ><span className='text-[#ff3333]'>Special</span> Products</h2>
+                            <div className='col-span-5 border-b-1 border-zinc-400'></div>
+                            <div className='flex gap-4 justify-end -order-1 md:order-1'>
+                                <button onClick={handleleft}><FaChevronLeft /></button>
+                                <button onClick={handleRight}><FaChevronRight /></button>
+                            </div>
                         </div>
 
-                        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-94 gap-6'>
+                        <div className='w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 min-h-94 gap-6'>
+                            <div className='bg-white flex flex-col items-center shadow-lg rounded-lg p-4'>
+                                <div className='border-b-1 pb-3 border-gray-200'>
+                                    <img src="https://dostguru.com/HTML/hitech/assets/img/product/deal_1.jpg" alt="" />
+                                </div>
+                                <span className='mt-5'>star here</span>
+                                <h3 className='text-xl  my-1'>Smart Watch Black</h3>
+                                <div className='flex gap-2'>
+                                    <span className='text-[#ff3333] font-semibold'>$30.00</span>
+                                    <span className='text-gray-500 line-through'>$40.00</span>
+                                </div>
+                            </div>
                             <div className='bg-white flex flex-col items-center shadow-lg rounded-lg p-4'>
                                 <div className='border-b-1 pb-3 border-gray-200'>
                                     <img src="https://dostguru.com/HTML/hitech/assets/img/product/deal_1.jpg" alt="" />
@@ -85,6 +124,28 @@ function SpecialProduct() {
                                 </div>
                             </div>
                         </div>
+
+                        {/* <div className='flex w-full overflow-hidden min-h-94'>
+                            <div className='flex gap-3 transition-transform duration-500 ease-in-out' style={{ transform: `translateX(-${next * 31.10}%)` }}>
+                                {
+                                    cardData.map((cards) => (
+                                        <div key={cards.id} className='bg-white flex-[0_0_100%] lg:flex-[0_0_29.50%] p-4  shrink-0 shadow-lg rounded-lg'>
+                                            <div className='border-b-1 pb-3 border-gray-200'>
+                                                <img src={cards.image} alt="" />
+                                            </div>
+                                            <span className='mt-5'>{cards.star}</span>
+                                            <h3 className='text-xl  my-1'>{cards.title}</h3>
+                                            <div className='flex gap-2'>
+                                                <span className='text-[#ff3333] font-semibold'>{cards.mainPrice}</span>
+                                                <span className='text-gray-500 line-through'>{cards.subPrice}</span>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+
+                            </div>
+
+                        </div> */}
                     </div>
                 </div>
             </div>
