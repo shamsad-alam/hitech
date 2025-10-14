@@ -1,5 +1,9 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import Slider from "react-slick";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 const topCatList = [
@@ -16,21 +20,30 @@ const topCatList = [
 ]
 
 function TopCategory() {
+    const sliderRef = useRef(null)
 
-    const [current, setcurrent] = useState(0)
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        arrows: false, // default arrow hide
+        responsive: [
+            { breakpoint: 1024, settings: { slidesToShow: 2 } },
+            { breakpoint: 640, settings: { slidesToShow: 1 } },
+        ],
+    };
 
-    const handleright = () => {
-        if (current + 7 < topCatList.length) {
-            setcurrent(current + 1)
-        }
-    }
-    const handleleft = () => {
-        if (current > 0) {
-            setcurrent(current - 1)
-        }
-    }
+    const nextSlide = () => {
+        sliderRef.current.slickNext(); // 👈 Next button click
+    };
 
-    const visibleTestimonials = topCatList.slice(current, current + 7);
+    const prevSlide = () => {
+        sliderRef.current.slickPrev(); // 👈 Prev button click
+    };
 
     return (
         <>
@@ -39,13 +52,13 @@ function TopCategory() {
                     <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
                         <h2 className='text-2xl col-span-8 lg:col-span-2 -order-2 font-semibold' ><span className='text-[#ff3333]'>Special</span> Products</h2>
                         <div className='col-span-9 border-b-1 border-zinc-400'></div>
-                        <div className='flex gap-4 justify-end -order-1 md:order-1'>
-                            <button onClick={handleleft} disabled={handleleft == 0} ><FaChevronLeft /></button>
-                            <button onClick={handleright} disabled={handleright + 7 >= topCatList.length}><FaChevronRight /></button>
+                        <div className='relative flex gap-4 justify-end -order-1 md:order-1'>
+                            <button onClick={prevSlide} ><FaChevronLeft /></button>
+                            <button onClick={nextSlide} ><FaChevronRight /></button>
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6'>
+                    {/* <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-6'>
                         {
                             visibleTestimonials.map((catlist) => (
                                 <div key={catlist.id} className='w-full bg-white flex flex-col items-center shadow-lg rounded-lg p-3'>
@@ -56,7 +69,22 @@ function TopCategory() {
                                 </div>
                             ))
                         }
-                    </div>
+                    </div> */}
+
+                    <Slider {...settings}>
+                        {
+                            topCatList.map((catlist) => (
+                                <div key={catlist.id} className='w-full bg-white flex flex-col items-center justify-center shadow-lg rounded-lg p-3'>
+                                    <div className='mb-3'>
+                                        <img src={catlist.image} alt="" />
+                                    </div>
+                                    <h3 className='text-xl pt-3 my-2 border-t-1 pb-3 border-gray-200'>{catlist.title} </h3>
+                                </div>
+                            ))
+                        }
+                    </Slider>
+
+
                 </div>
             </div>
         </>
