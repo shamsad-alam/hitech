@@ -11,7 +11,7 @@ const CardSlider = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const visibleCard = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 7
+    const visibleCard = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3
 
     const next = () => {
         if (currentIndex + visibleCard < cards.length) {
@@ -45,7 +45,7 @@ const CardSlider = () => {
             <div className="overflow-hidden">
                 <div
                     className="flex transition-all duration-500"
-                    style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+                    style={{ transform: `translateX(-${(currentIndex * 100) / visibleCard}%)` }}
                 >
                     {cards.map((card) => (
                         <div

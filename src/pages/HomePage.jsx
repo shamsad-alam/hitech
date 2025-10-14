@@ -26,7 +26,7 @@ function HomePage() {
             <Blog />
             <Footer />
 
-            <ProductDetails />
+            {/* <ProductDetails /> */}
 
 
         </div>
