@@ -10,10 +10,8 @@ function App() {
 
 
       {/* Practice perpus */}
-      <hr /> <hr /> <hr />
-      <CardSlider />
-      <hr /> <hr />
-      <Testimonial />
+      {/* <CardSlider /> */}
+      {/* <Testimonial /> */}
 
     </div>
   )

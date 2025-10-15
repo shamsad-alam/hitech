@@ -35,7 +35,7 @@ function Testimonial() {
         <>
             <div className='w-[90%] mx-auto my-10'>
                 <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
-                    <h2 className='text-2xl col-span-8 lg:col-span-2 -order-2 font-semibold' ><span className='text-[#ff3333]'>Special</span> Products</h2>
+                    <h2 className='text-2xl col-span-8 lg:col-span-2 -order-2 font-semibold' ><span className='text-[#ff3333]'>Top</span> Categories</h2>
                     <div className='col-span-9 border-b-1 border-zinc-400'></div>
                     <div className='relative flex gap-4 justify-end -order-1 md:order-1'>
                         <button onClick={handlePrev} className='cursor-pointer'><FaChevronLeft /></button>

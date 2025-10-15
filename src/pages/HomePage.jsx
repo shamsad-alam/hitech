@@ -16,15 +16,15 @@ function HomePage() {
             {/* <Navbar /> */}
             <ServiceCard />
             <SpecialOfferCard />
-            <SpecialProduct />
+            {/* <SpecialProduct /> */}
 
             <TopProduct />
             <TopCategory />
             <LaptopComputer />
             {/* Copy LaptopComputer component and Add more Section  */}
 
-            <Blog />
-            <Footer />
+            {/* <Blog />
+            <Footer /> */}
 
             {/* <ProductDetails /> */}
 
