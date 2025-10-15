@@ -23,8 +23,8 @@ function HomePage() {
             <LaptopComputer />
             {/* Copy LaptopComputer component and Add more Section  */}
 
-            {/* <Blog />
-            <Footer /> */}
+            <Blog />
+            <Footer />
 
             {/* <ProductDetails /> */}
 

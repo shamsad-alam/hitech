@@ -47,7 +47,7 @@ function TopCategory() {
                     <div className='flex  transition-all duration-500' style={{ transform: `translateX(-${(index * 100) / visibleCard}%)` }}>
                         {topCatList.map((list) => (
                             <div key={list.id} className='flex-none w-full md:w-1/2 lg:w-1/7 p-2 my-5'>
-                                <div className='flex flex-col items-center gap-3 p-4 shadow-sm rounded-xl'>
+                                <div className='flex flex-col bg-white items-center gap-3 p-4 shadow-sm rounded-xl'>
                                     <img src={list.image} alt="" />
                                     <h3>{list.title} </h3>
                                 </div>
