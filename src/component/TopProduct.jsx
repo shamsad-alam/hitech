@@ -26,10 +26,10 @@ function TopProduct() {
         <>
             <div className='w-[90%] mx-auto py-10'>
                 <div>
-                    <div className='grid lg:grid-cols-7 items-center justify-between gap-4 mb-5'>
-                        <h2 className='text-2xl font-semibold' ><span className='text-[#ff3333]'>Top</span> Products</h2>
-                        <div className=' md:col-span-5 border-b-1 border-zinc-400'></div>
-                        <div className='ml-auto flex gap-3 '>
+                    <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
+                        <h2 className='text-2xl col-span-7 lg:col-span-3 -order-2 font-semibold' ><span className='text-[#ff3333]'>Laptop </span> & Computer</h2>
+                        <div className='col-span-8 border-b-1 border-zinc-400'></div>
+                        <div className='relative flex gap-4 justify-end -order-1 md:order-1'>
                             <button onClick={handleLeft} className='cursor-pointer'><FaChevronLeft /></button>
                             <button onClick={handleRight} className='cursor-pointer'><FaChevronRight /></button>
                         </div>

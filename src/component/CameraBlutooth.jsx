@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
 
-
-
-function LaptopComputer() {
+function CameraBlutooth() {
     const [cardIndex, setcardIndex] = useState(0)
     const cardResponsive = window.innerWidth < 640 ? 1 : window.innerWidth < 1024 ? 2 : 3
 
@@ -20,11 +18,12 @@ function LaptopComputer() {
 
     }
     return (
-        <>
+        <section>
             <div className='w-[90%] mx-auto py-10'>
                 <div>
+                    {/* header (title) section */}
                     <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
-                        <h2 className='text-2xl col-span-7 lg:col-span-3 -order-2 font-semibold' ><span className='text-[#ff3333]'>Laptop </span> & Computer</h2>
+                        <h2 className='text-2xl col-span-7 lg:col-span-3 -order-2 font-semibold' ><span className='text-[#ff3333]'>Camera </span> & Bluetooth</h2>
                         <div className='col-span-8 border-b-1 border-zinc-400'></div>
                         <div className='relative flex gap-4 justify-end -order-1 md:order-1'>
                             <button onClick={handlePrev} className='cursor-pointer'><FaChevronLeft /></button>
@@ -32,8 +31,9 @@ function LaptopComputer() {
                         </div>
                     </div>
 
-                    <div className='flex flex-col lg:flex-row gap-6'>
-                        <img src="https://dostguru.com/HTML/hitech/assets/img/c&l.jpg" className='order-3' alt="" />
+                    {/* All cards section  */}
+                    <div className='flex flex-col lg:flex-row-reverse gap-6'>
+                        <img src="https://dostguru.com/HTML/hitech/assets/img/h&b.jpg" className='order-3' alt="" />
 
                         <div className='overflow-hidden order-1'>
                             <div className='flex transition-all duration-500' style={{ transform: `translateX(-${(cardIndex * 100) / cardResponsive}%)` }}>
@@ -56,26 +56,23 @@ function LaptopComputer() {
                                 ))}
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
-        </>
+        </section>
     )
 }
 
+export default CameraBlutooth
+
+
 const dataList = [
+    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
     { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
     { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
     { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
 
 ]
-
-
-export default LaptopComputer
