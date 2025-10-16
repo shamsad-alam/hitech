@@ -14,7 +14,7 @@ import CameraBlutooth from '../component/CameraBlutooth'
 function HomePage() {
     return (
         <div className='bg-gray-50'>
-            {/* <Navbar /> */}
+            <Navbar />
             <ServiceCard />
             <SpecialOfferCard />
             {/* <SpecialProduct /> */}

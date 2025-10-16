@@ -39,7 +39,7 @@ function CameraBlutooth() {
                             <div className='flex transition-all duration-500' style={{ transform: `translateX(-${(cardIndex * 100) / cardResponsive}%)` }}>
                                 {dataList.map((list, index) => (
                                     <div key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
-                                        <div className='bg-white flex flex-row gap-4 items-center shadow-md rounded-lg p-5'>
+                                        <div className='bg-white flex flex-row justify-center gap-4 items-center shadow-md rounded-lg p-5'>
                                             <div className='w-25'>
                                                 <img src={list.image} alt="" />
                                             </div>
