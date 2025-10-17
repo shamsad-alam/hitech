@@ -2,9 +2,11 @@ import React from 'react'
 
 function AboutPages() {
     return (
-        <div>
-            <h3>About Pages.</h3>
-        </div>
+        <>
+            <div >
+                <h3>about page</h3>
+            </div>
+        </>
     )
 }
 
