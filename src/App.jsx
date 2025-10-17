@@ -2,24 +2,36 @@ import React from 'react'
 import HomePage from './pages/HomePage'
 import CardSlider from './practice/CardSlider'
 import Testimonial from './practice/Testimonial'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider } from 'react-router-dom'
 import AboutPages from './pages/AboutPages'
-import ContactPages from './pages/ContactPages'
 import ErrorPage from './pages/ErrorPage'
+import LayoutDesign from './UiLayout/LayoutDesign'
 
 function App() {
+  const routers = createBrowserRouter([
+    {
+      path: '/',
+      element: <LayoutDesign />,
+      errorElement: <ErrorPage />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: '/about', element: <AboutPages /> },
+      ]
+    }
+  ])
   return (
     <div>
-      {/* <HomePage /> */}
-      <BrowserRouter>
+      <RouterProvider  router={routers}/>
+      {/* <BrowserRouter>
         <Routes>
-          <Route index element={<HomePage />} />
-          <Route path='/about' element={<AboutPages />} />
-          <Route path='/contact' element={<ContactPages />} />
-          <Route path='*' element={<ErrorPage />} />
-
+          <Route path='/' element={<LayoutDesign />} >
+            <Route index element={<HomePage />} />
+            <Route path='/about' element={<AboutPages />} />
+            <Route path='/contact' element={<ContactPages />} />
+            <Route path='*' element={<ErrorPage />} />
+          </Route>
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
 
 
 

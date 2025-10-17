@@ -6,11 +6,12 @@ import Footer from '../component/Footer'
 function LayoutDesign() {
     return (
         <>
+            <Navbar />
             <main>
-                <Navbar />
                 <Outlet />
-                <Footer />
             </main>
+            <Footer />
+
         </>
     )
 }

@@ -15,7 +15,6 @@ import Carousel from '../component/Carousel'
 function HomePage() {
     return (
         <div className='bg-gray-50'>
-            <Navbar />
             <Carousel />
             <ServiceCard />
             <SpecialOfferCard />
@@ -28,7 +27,6 @@ function HomePage() {
             {/* Copy LaptopComputer component and Add more Section  */}
 
             <Blog />
-            <Footer />
 
             {/* <ProductDetails /> */}
 
