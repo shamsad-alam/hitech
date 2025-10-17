@@ -10,11 +10,13 @@ import Blog from '../component/Blog'
 import Footer from '../component/Footer'
 import ProductDetails from './ProductDetails'
 import CameraBlutooth from '../component/CameraBlutooth'
+import Carousel from '../component/Carousel'
 
 function HomePage() {
     return (
         <div className='bg-gray-50'>
             <Navbar />
+            <Carousel />
             <ServiceCard />
             <SpecialOfferCard />
             {/* <SpecialProduct /> */}
