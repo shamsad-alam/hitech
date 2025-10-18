@@ -52,6 +52,7 @@ function Navbar() {
                             <button className='bg-[#ff3333]  text-white text-[20px] px-10 py-2 rounded-r-md'>Search</button>
                         </div>
 
+                        {/* action button link */}
                         <div className='flex gap-6'>
                             <div className='md:flex hidden'><h3>Compare</h3></div>
                             <div className='md:flex hidden'><h3>Favourate</h3></div>

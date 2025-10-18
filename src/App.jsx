@@ -8,33 +8,32 @@ import ErrorPage from './pages/ErrorPage'
 import LayoutDesign from './UiLayout/LayoutDesign'
 
 function App() {
-  const routers = createBrowserRouter([
-    {
-      path: '/',
-      element: <LayoutDesign />,
-      errorElement: <ErrorPage />,
-      children: [
-        { index: true, element: <HomePage /> },
-        { path: '/about', element: <AboutPages /> },
-      ]
-    }
-  ])
+  // const routers = createBrowserRouter([
+  //   {
+  //     path: '/',
+  //     element: <LayoutDesign />,
+  //     errorElement: <ErrorPage />,
+  //     children: [
+  //       { index: true, element: <HomePage /> },
+  //       { path: '/about', element: <AboutPages /> },
+  //     ]
+  //   }
+  // ])
   return (
     <div>
-      <RouterProvider  router={routers}/>
+      {/* <RouterProvider  router={routers}/> */}
       {/* <BrowserRouter>
         <Routes>
           <Route path='/' element={<LayoutDesign />} >
             <Route index element={<HomePage />} />
             <Route path='/about' element={<AboutPages />} />
-            <Route path='/contact' element={<ContactPages />} />
             <Route path='*' element={<ErrorPage />} />
           </Route>
         </Routes>
       </BrowserRouter> */}
 
-
-
+      <HomePage />
+      
       {/* Practice perpus */}
       {/* <CardSlider /> */}
       {/* <Testimonial /> */}
