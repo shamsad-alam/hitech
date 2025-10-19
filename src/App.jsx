@@ -7,6 +7,8 @@ import AboutPages from './pages/AboutPages'
 import ErrorPage from './pages/ErrorPage'
 import LayoutDesign from './UiLayout/LayoutDesign'
 import Cart from './pages/Cart'
+import BlogPage from './pages/BlogPage'
+import LoginPage from './pages/LoginPage'
 
 function App() {
   const routers = createBrowserRouter([
@@ -17,7 +19,9 @@ function App() {
       children: [
         { index: true, element: <HomePage /> },
         { path: '/about', element: <AboutPages /> },
-        { path: '/cart', element: <Cart /> }
+        { path: '/cart', element: <Cart /> },
+        { path: '/blog', element: <BlogPage /> },
+        { path: '/pages/login', element: <LoginPage /> }
       ]
     }
   ])
