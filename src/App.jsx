@@ -6,38 +6,24 @@ import { BrowserRouter, Routes, Route, createBrowserRouter, RouterProvider } fro
 import AboutPages from './pages/AboutPages'
 import ErrorPage from './pages/ErrorPage'
 import LayoutDesign from './UiLayout/LayoutDesign'
+import Cart from './pages/Cart'
 
 function App() {
-  // const routers = createBrowserRouter([
-  //   {
-  //     path: '/',
-  //     element: <LayoutDesign />,
-  //     errorElement: <ErrorPage />,
-  //     children: [
-  //       { index: true, element: <HomePage /> },
-  //       { path: '/about', element: <AboutPages /> },
-  //     ]
-  //   }
-  // ])
+  const routers = createBrowserRouter([
+    {
+      path: '/',
+      element: <LayoutDesign />,
+      errorElement: <ErrorPage />,
+      children: [
+        { index: true, element: <HomePage /> },
+        { path: '/about', element: <AboutPages /> },
+        { path: '/cart', element: <Cart /> }
+      ]
+    }
+  ])
   return (
     <div>
-      {/* <RouterProvider  router={routers}/> */}
-      {/* <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<LayoutDesign />} >
-            <Route index element={<HomePage />} />
-            <Route path='/about' element={<AboutPages />} />
-            <Route path='*' element={<ErrorPage />} />
-          </Route>
-        </Routes>
-      </BrowserRouter> */}
-
-      <HomePage />
-      
-      {/* Practice perpus */}
-      {/* <CardSlider /> */}
-      {/* <Testimonial /> */}
-
+      <RouterProvider router={routers} />
     </div>
   )
 }

@@ -11,7 +11,6 @@ import Footer from '../component/Footer'
 import ProductDetails from './ProductDetails'
 import CameraBlutooth from '../component/CameraBlutooth'
 import Carousel from '../component/Carousel'
-import Cart from './Cart'
 
 function HomePage() {
     return (
@@ -30,9 +29,6 @@ function HomePage() {
             <Blog />
 
             {/* <ProductDetails /> */}
-
-            <Cart />
-
 
         </div>
     )

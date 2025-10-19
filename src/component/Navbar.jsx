@@ -58,8 +58,10 @@ function Navbar() {
                             <div className='md:flex hidden'><h3>Favourate</h3></div>
                             <div className='flex gap-2 items-center'>
                                 <span className=' text-[25px] cursor-pointer md:hidden'><IoPersonCircle /></span>
-                                <span className='flex text-2xl cursor-pointer'><FaCartArrowDown />
+                                <span className='flex text-2xl cursor-pointer hover:text-red-500'>
+                                    <Link to='/cart'><FaCartArrowDown /></Link>
                                 </span>
+
                             </div>
                         </div>
                     </div>
