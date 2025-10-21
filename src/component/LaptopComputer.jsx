@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
+import { Link } from 'react-router-dom';
 
 
 
@@ -23,6 +24,7 @@ function LaptopComputer() {
         <>
             <div className='w-[90%] mx-auto py-10'>
                 <div>
+                    {/* header section */}
                     <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
                         <h2 className='text-2xl col-span-7 lg:col-span-3 -order-2 font-semibold' ><span className='text-[#ff3333]'>Laptop </span> & Computer</h2>
                         <div className='col-span-8 border-b-1 border-zinc-400'></div>
@@ -38,7 +40,7 @@ function LaptopComputer() {
                         <div className='overflow-hidden order-1'>
                             <div className='flex transition-all duration-500' style={{ transform: `translateX(-${(cardIndex * 100) / cardResponsive}%)` }}>
                                 {dataList.map((list, index) => (
-                                    <div key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
+                                    <Link to={`/products/${list.id}`} key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
                                         <div className='bg-white flex flex-row justify-center  gap-4 items-center shadow-md rounded-lg p-5'>
                                             <div className='w-25'>
                                                 <img src={list.image} alt="" />
@@ -52,13 +54,10 @@ function LaptopComputer() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
@@ -67,13 +66,13 @@ function LaptopComputer() {
 }
 
 const dataList = [
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 1, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 2, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 3, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 4, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 5, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 6, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 7, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
 
 ]
 

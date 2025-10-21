@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { FaStar } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 function CameraBlutooth() {
     const [cardIndex, setcardIndex] = useState(0)
@@ -38,7 +39,7 @@ function CameraBlutooth() {
                         <div className='overflow-hidden order-1'>
                             <div className='flex transition-all duration-500' style={{ transform: `translateX(-${(cardIndex * 100) / cardResponsive}%)` }}>
                                 {dataList.map((list, index) => (
-                                    <div key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
+                                    <Link to={`products/${list.id}`} key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
                                         <div className='bg-white flex flex-row justify-center gap-4 items-center shadow-md rounded-lg p-5'>
                                             <div className='w-25'>
                                                 <img src={list.image} alt="" />
@@ -52,7 +53,7 @@ function CameraBlutooth() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </Link>
                                 ))}
                             </div>
                         </div>
@@ -67,12 +68,12 @@ export default CameraBlutooth
 
 
 const dataList = [
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
-    { image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 1, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 2, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 3, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 4, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 5, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_26.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 6, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_24.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
+    { id: 7, image: 'https://dostguru.com/HTML/hitech/assets/img/product/product_10.jpg', title: 'New Hp Laptop best', mainPrice: '30.00', subPrice: '40.00' },
 
 ]

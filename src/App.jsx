@@ -9,6 +9,9 @@ import LayoutDesign from './UiLayout/LayoutDesign'
 import Cart from './pages/Cart'
 import BlogPage from './pages/BlogPage'
 import LoginPage from './pages/LoginPage'
+import ProductListSam from './practice/samproduct/ProductListSam'
+import ProductDetailsSam from './practice/samproduct/ProductDetailsSam'
+import ProductDetails from './pages/ProductDetails'
 
 function App() {
   const routers = createBrowserRouter([
@@ -21,13 +24,25 @@ function App() {
         { path: '/about', element: <AboutPages /> },
         { path: '/cart', element: <Cart /> },
         { path: '/blog', element: <BlogPage /> },
-        { path: '/pages/login', element: <LoginPage /> }
+        { path: '/pages/login', element: <LoginPage /> },
+        { path: '/products/:id', element: <ProductDetails /> }
       ]
     }
   ])
   return (
     <div>
       <RouterProvider router={routers} />
+
+
+      {/* <div>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<ProductListSam />} />
+            <Route path='/products/:id' element={<ProductDetailsSam />} />
+
+          </Routes>
+        </BrowserRouter>
+      </div> */}
     </div>
   )
 }

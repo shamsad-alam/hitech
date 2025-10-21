@@ -26,6 +26,7 @@ function HomePage() {
 
             <Blog />
 
+
             {/* <ProductDetails /> */}
 
         </div>
