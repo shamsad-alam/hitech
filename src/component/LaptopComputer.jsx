@@ -57,6 +57,26 @@ function LaptopComputer() {
                                     </Link>
                                 ))}
                             </div>
+
+                            <div className='flex transition-all duration-500' style={{ transform: `translateX(-${(cardIndex * 100) / cardResponsive}%)` }}>
+                                {dataList.map((list, index) => (
+                                    <Link to={`/products/${list.id}`} key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
+                                        <div className='bg-white flex flex-row-reverse justify-center  gap-4 items-center shadow-md rounded-lg p-5'>
+                                            <div className='w-25'>
+                                                <img src={list.image} alt="" />
+                                            </div>
+                                            <div>
+                                                <h3 className='text-lg font-semibold '>{list.title} </h3>
+                                                <span className='mt-4 flex text-sm text-red-600 gap-0.5'><FaStar /><FaStar /><FaStar /><FaStar /><FaStar /></span>
+                                                <div className='flex gap-2'>
+                                                    <span className='text-[#ff3333] font-semibold'>${list.mainPrice}</span>
+                                                    <span className='text-gray-500 line-through'>${list.subPrice}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>

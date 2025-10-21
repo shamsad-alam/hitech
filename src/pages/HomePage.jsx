@@ -9,6 +9,7 @@ import Blog from '../component/Blog'
 import ProductDetails from './ProductDetails'
 import CameraBlutooth from '../component/CameraBlutooth'
 import Carousel from '../component/Carousel'
+import Smartwatch from '../component/SmartWatch'
 
 function HomePage() {
     return (
@@ -22,6 +23,7 @@ function HomePage() {
             <TopCategory />
             <LaptopComputer />
             <CameraBlutooth />
+            <Smartwatch />
             {/* Copy LaptopComputer component and Add more Section  */}
 
             <Blog />
