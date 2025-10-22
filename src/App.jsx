@@ -12,6 +12,7 @@ import LoginPage from './pages/LoginPage'
 import ProductListSam from './practice/samproduct/ProductListSam'
 import ProductDetailsSam from './practice/samproduct/ProductDetailsSam'
 import ProductDetails from './pages/ProductDetails'
+import ProductList from './pages/ProductList'
 
 function App() {
   const routers = createBrowserRouter([
@@ -21,11 +22,13 @@ function App() {
       errorElement: <ErrorPage />,
       children: [
         { index: true, element: <HomePage /> },
+        { path: '/products', element: <ProductList /> },
         { path: '/about', element: <AboutPages /> },
-        { path: '/cart', element: <Cart /> },
         { path: '/blog', element: <BlogPage /> },
+        { path: '/products/:id', element: <ProductDetails /> },
+        { path: '/pages/cart', element: <Cart /> },
         { path: '/pages/login', element: <LoginPage /> },
-        { path: '/products/:id', element: <ProductDetails /> }
+
       ]
     }
   ])

@@ -10,6 +10,7 @@ import ProductDetails from './ProductDetails'
 import CameraBlutooth from '../component/CameraBlutooth'
 import Carousel from '../component/Carousel'
 import Smartwatch from '../component/SmartWatch'
+import Card from '../component/Card'
 
 function HomePage() {
     return (
@@ -24,10 +25,8 @@ function HomePage() {
             <LaptopComputer />
             <CameraBlutooth />
             <Smartwatch />
-            {/* Copy LaptopComputer component and Add more Section  */}
 
             <Blog />
-
 
             {/* <ProductDetails /> */}
 

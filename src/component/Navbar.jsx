@@ -59,7 +59,7 @@ function Navbar() {
                             <div className='flex gap-2 items-center'>
                                 <span className=' text-[25px] cursor-pointer md:hidden'><IoPersonCircle /></span>
                                 <span className='flex text-2xl cursor-pointer hover:text-red-500'>
-                                    <Link to='/cart'><FaCartArrowDown /></Link>
+                                    <Link to='/pages/cart'><FaCartArrowDown /></Link>
                                 </span>
 
                             </div>
@@ -72,7 +72,7 @@ function Navbar() {
                     <div className='md:flex max-w-[90%] mx-auto justify-between items-center'>
                         <div className='flex gap-10 font-semibold cursor-pointer'>
                             <Link to="/" className="hover:text-red-600">Home</Link>
-                            <Link to="/shop" className="hover:text-red-600">Shop</Link>
+                            <Link to="/products" className="hover:text-red-600">Shop</Link>
                             <Link to="/blog" className="hover:text-red-600">Blog</Link>
                             <Link to="/gallery" className="hover:text-red-600">Gallery</Link>
                             <Link to="/products" className="hover:text-red-600">Products</Link>
