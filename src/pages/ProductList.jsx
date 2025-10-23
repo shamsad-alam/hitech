@@ -1,14 +1,21 @@
 import React from 'react'
 import Card from '../component/Card'
+import { Link } from 'react-router-dom'
 
 function ProductList() {
     return (
         <>
             <section className='bg-gray-50'>
-                <div className='w-[90%] mx-auto py-10'>
-                    <div className='flex gap-4'>
-                        <aside className='w-[23%] bg-white rounded-md p-5 text-zinc-600 uppercase shadow-md'>
-                            <h2 className='text-2xl font-semibold'>Filter by</h2>
+                <div className='md:py-5 py-3 md:mt-10 mt-7 bg-white shadow-sm'>
+                    <h3 className='w-[90%] mx-auto text-md text-zinc-800 flex gap-9 font-semibold'>
+                        <Link to='/'>Home</Link>
+                        <span> Product</span>
+                    </h3>
+                </div>
+                <div className='w-[90%] mx-auto md:py-10 my-7'>
+                    <div className='md:flex gap-4'>
+                        <aside className='md:w-[23%] md:inline-block hidden bg-white rounded-md p-5 text-zinc-600 uppercase shadow-md'>
+                            <h2 className='text-2xl font-semibold text-zinc-900'>Filter by</h2>
 
                             {/* range section */}
                             <div className='mt-3 mb-8'>

@@ -22,7 +22,10 @@ function Smartwatch() {
     }
     return (
         <>
-            <div className='w-[90%] mx-auto py-10'>
+            <div className='w-[90%] mx-auto md:py-10 py-6'>
+                {/* extra section images add for ad */}
+                <img src="https://dostguru.com/HTML/hitech/assets/img/full_banner.jpg" className="md:mb-17 mb-6" alt="" />
+
                 <div>
                     {/* header section */}
                     <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
@@ -97,4 +100,4 @@ const dataList = [
 ]
 
 
-export default  Smartwatch
+export default Smartwatch

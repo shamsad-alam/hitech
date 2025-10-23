@@ -38,7 +38,7 @@ function ServiceCard() {
     return (
         <>
             <div>
-                <div className='w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto py-10'>
+                <div className='w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:gap-10 gap-5 mx-auto md:py-10 py-6'>
                     {
                         serviceData.map((data) => (
                             <div key={data.id} className='bg-white flex justify-center items-center  gap-5 py-10 text-center shadow-lg rounded-lg'>

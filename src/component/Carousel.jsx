@@ -21,10 +21,10 @@ function Carousel() {
     return (
         <>
             <section>
-                <div className='w-[90%] mx-auto pb-10 pt-8 '>
+                <div className='w-[90%] mx-auto md:pb-10 md:pt-8 pt-4 '>
                     <div className='md:flex gap-5'>
                         {/* Aside menu (categeory) */}
-                        <div className='flex flex-1/4 bg-white shadow-md rounded-md'>
+                        <div className='md:flex flex-1/4 bg-white shadow-md rounded-md hidden'>
                             <div className='w-full relative'>
                                 <div className='flex items-center gap-2 bg-red-500 text-white p-3 rounded-md cursor-pointer'>
                                     <span className='text-xl'><HiMenuAlt2 /></span>

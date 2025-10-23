@@ -33,7 +33,7 @@ function Navbar() {
 
                 {/* ==================== Main Navbar ================= */}
                 <div className='border-b-1 border-gray-300'>
-                    <div className='max-w-[90%] mx-auto flex justify-between items-center md:py-6 py-4'>
+                    <div className='max-w-[90%] mx-auto flex justify-between items-center py-4'>
                         <div className='flex gap-2 items-center '>
                             <span onClick={handleOpen} className='text-[25px] text-red-600 cursor-pointer md:hidden '><HiMenuAlt2 /></span>
                             <Link to='/'><h1 className='text-3xl font-bold'>Hi<span className='text-red-600'>T</span>ech</h1></Link>
@@ -68,7 +68,7 @@ function Navbar() {
                 </div>
 
                 {/* ==================== Bottom Navbar ================= */}
-                <div className='py-4 shadow-none md:shadow-lg md:block hidden'>
+                <div className='py-3 shadow-none md:shadow-lg md:block hidden'>
                     <div className='md:flex max-w-[90%] mx-auto justify-between items-center'>
                         <div className='flex gap-10 font-semibold cursor-pointer'>
                             <Link to="/" className="hover:text-red-600">Home</Link>
@@ -113,7 +113,7 @@ function Navbar() {
                                      bg-white shadow-md gap-4 font-semibold cursor-pointer overflow-hidden transition-all duration-500 ease-in-out
                                       ${isOpen ? "left-0" : "100%"}`}>
                                     <Link to="/" className="hover:text-red-600">Home</Link>
-                                    <Link to="/shop" className="hover:text-red-600">Shop</Link>
+                                    <Link to="/products" className="hover:text-red-600">Shop</Link>
                                     <Link to="/blog" className="hover:text-red-600">Blog</Link>
                                     <Link to="/gallery" className="hover:text-red-600">Gallery</Link>
                                     <Link to="/products" className="hover:text-red-600">Products</Link>

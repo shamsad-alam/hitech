@@ -34,7 +34,7 @@ function TopCategory() {
 
     return (
         <>
-            <div className='w-[90%] mx-auto my-10'>
+            <div className='w-[90%] mx-auto md:my-10 my-6'>
                 <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
                     <h2 className='text-2xl col-span-8 lg:col-span-2 -order-2 font-semibold' ><span className='text-[#ff3333]'>Top </span> Categories</h2>
                     <div className='col-span-9 border-b-1 border-zinc-400'></div>
@@ -47,7 +47,7 @@ function TopCategory() {
                 <div className='overflow-hidden'>
                     <Link to='/products' className='flex  transition-all duration-500' style={{ transform: `translateX(-${(index * 100) / visibleCard}%)` }}>
                         {topCatList.map((list) => (
-                            <div key={list.id} className='flex-none w-full md:w-1/2 lg:w-1/7 m-2 my-5'>
+                            <div key={list.id} className='flex-none w-full md:w-1/2 lg:w-1/7 p-2 my-5'>
                                 <div className='flex flex-col bg-white items-center gap-3 p-4 shadow-sm rounded-xl'>
                                     <img src={list.image} alt="" />
                                     <h3>{list.title} </h3>

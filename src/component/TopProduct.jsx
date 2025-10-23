@@ -25,7 +25,7 @@ function TopProduct() {
 
     return (
         <>
-            <div className='w-[90%] mx-auto py-10'>
+            <div className='w-[90%] mx-auto md:py-10 py-6'>
                 <div>
                     <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>
                         <h2 className='text-2xl col-span-7 lg:col-span-3 -order-2 font-semibold' ><span className='text-[#ff3333]'>Top </span> Products</h2>

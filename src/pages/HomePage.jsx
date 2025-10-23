@@ -18,18 +18,14 @@ function HomePage() {
             <Carousel />
             <ServiceCard />
             <SpecialOfferCard />
-            {/* <SpecialProduct /> */}
+            <SpecialProduct />
 
             <TopProduct />
             <TopCategory />
             <LaptopComputer />
             <CameraBlutooth />
             <Smartwatch />
-
             <Blog />
-
-            {/* <ProductDetails /> */}
-
         </div>
     )
 }

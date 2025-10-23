@@ -19,7 +19,7 @@ function Blog() {
     };
     return (
         <>
-            <div className='w-[90%] mx-auto py-10'>
+            <div className='w-[90%] mx-auto md:py-10 py-6'>
                 {/* blog section here */}
                 <div>
                     {/* header section here */}
@@ -36,7 +36,7 @@ function Blog() {
                     <div className='overflow-hidden'>
                         <div className='flex transition-all duration-500 ease-in-out' style={{ transform: `translateX(-${(bindex * 100) / responsiveNum}%)` }}>
                             {blogList.map((list, index) => (
-                                <div key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 p-3'>
+                                <div key={index} className='flex-none w-full md:w-1/2 lg:w-1/3 md:p-3 py-3'>
                                     <div className='bg-white rounded-md shadow-md'>
                                         <div className=''>
                                             <img src={list.image} alt="" />
@@ -68,7 +68,7 @@ function NewsLetter() {
     return (
         <>
             {/* Newsletter section  making */}
-            <div className='w-full bg-[#ff3333] py-8 mt-10'>
+            <div className='w-full bg-[#ff3333] py-8 md:mt-10 mt-6'>
                 <div className='w-[90%] mx-auto'>
                     <div className='w-full  grid  lg:grid-cols-2 items-center  justify-between'>
                         <div>

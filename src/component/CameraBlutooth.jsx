@@ -20,7 +20,7 @@ function CameraBlutooth() {
     }
     return (
         <section>
-            <div className='w-[90%] mx-auto py-10'>
+            <div className='w-[90%] mx-auto md:py-10 py-6'>
                 <div>
                     {/* header (title) section */}
                     <div className='grid grid-cols-3 md:grid-cols-12 items-center justify-between gap-4 mb-5'>

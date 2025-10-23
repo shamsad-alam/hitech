@@ -10,7 +10,7 @@ function Card() {
                     <div className='flex flex-wrap transition-all duration-500'>
                         {
                             allproductList.map((list, index) => (
-                                <div key={index} className=' flex-none w-full md:w-1/2 lg:w-1/4 p-3'>
+                                <div key={index} className=' flex-none w-full md:w-1/2 lg:w-1/4 py-3 md:p-3'>
                                     <div className='bg-white flex flex-col items-center shadow-md rounded-lg p-4'>
                                         <div className='border-b-1 pb-3 border-gray-200'>
                                             <img src={list.image} alt="" />
