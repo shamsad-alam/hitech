@@ -13,6 +13,7 @@ import ProductListSam from './practice/samproduct/ProductListSam'
 import ProductDetailsSam from './practice/samproduct/ProductDetailsSam'
 import ProductDetails from './pages/ProductDetails'
 import ProductList from './pages/ProductList'
+import TabProductList from './practice/tabCategory/TabProductList'
 
 function App() {
   const routers = createBrowserRouter([
@@ -34,9 +35,16 @@ function App() {
   ])
   return (
     <div>
-      <RouterProvider router={routers} />
+      {/* <RouterProvider router={routers} /> */}
 
 
+      {/* practice all component here */}
+      <TabProductList />
+
+
+
+
+      {/* other coponent here */}
       {/* <div>
         <BrowserRouter>
           <Routes>
