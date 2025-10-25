@@ -36,3 +36,5 @@ const ProductData = [
     category: "Kids",
   },
 ];
+
+export default ProductData

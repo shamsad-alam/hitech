@@ -14,6 +14,7 @@ import ProductDetailsSam from './practice/samproduct/ProductDetailsSam'
 import ProductDetails from './pages/ProductDetails'
 import ProductList from './pages/ProductList'
 import TabProductList from './practice/tabCategory/TabProductList'
+import PracticeDay1 from './practice/day1/PracticeDay1'
 
 function App() {
   const routers = createBrowserRouter([
@@ -40,6 +41,7 @@ function App() {
 
       {/* practice all component here */}
       <TabProductList />
+      <PracticeDay1 />
 
 
 
