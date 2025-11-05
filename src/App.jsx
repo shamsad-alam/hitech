@@ -36,17 +36,17 @@ function App() {
   ])
   return (
     <div>
-      {/* <RouterProvider router={routers} /> */}
+      <RouterProvider router={routers} />
 
 
       {/* practice all component here */}
-      <TabProductList />
-      <PracticeDay1 />
+      {/* <TabProductList />
+      <PracticeDay1 /> */}
 
 
 
 
-      {/* other coponent here */}
+      {/* other coponent here ================================================ */}
       {/* <div>
         <BrowserRouter>
           <Routes>
